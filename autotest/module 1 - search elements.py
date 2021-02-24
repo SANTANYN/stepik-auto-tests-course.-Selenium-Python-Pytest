@@ -16,7 +16,9 @@ try:
     input4.send_keys("Russia")
     button = browser.find_element_by_css_selector("#submit_button")
     button.click()
-
+finally:
+    time.sleep(30)
+    browser.quit()
 
 # Second task
 browser = webdriver.Chrome()
