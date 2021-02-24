@@ -2,7 +2,7 @@ from selenium import webdriver
 import time
 import math
 
-''' #first task
+ #first task
 try:
     browser = webdriver.Chrome()
     browser.get("http://suninjuly.github.io/simple_form_find_task.html")
@@ -16,9 +16,10 @@ try:
     input4.send_keys("Russia")
     button = browser.find_element_by_css_selector("#submit_button")
     button.click()
-'''
-
-'''''# Second task
+finally:
+    time.sleep(30)
+    browser.quit()
+# Second task
 browser = webdriver.Chrome()
 browser.get("http://suninjuly.github.io/find_link_text")
 link = browser.find_element_by_link_text(str(math.ceil(math.pow(math.pi, math.e)*10000)))
@@ -33,8 +34,7 @@ input4 = browser.find_element_by_css_selector("#country")
 input4.send_keys("Russia")
 button = browser.find_element_by_xpath("/html/body/div/form/button")
 button.click()
-'''''
-'''#Third task
+#Third task
 try:
     browser = webdriver.Chrome()
     browser.get("http://suninjuly.github.io/huge_form.html")
@@ -47,8 +47,7 @@ try:
 finally:
     time.sleep(30)
     browser.quit()
-'''
-'''#fourth task
+#fourth task
 try:
     browser = webdriver.Chrome()
     browser.get("http://suninjuly.github.io/find_xpath_form")
@@ -62,8 +61,7 @@ finally:
     time.sleep(30)
     browser.quit()
 #fifth task
-'''
-'''
+
 browser = webdriver.Chrome()
 browser.get("http://suninjuly.github.io/registration2.html")
 textarea = browser.find_element_by_css_selector('input.form-control.first')
@@ -74,15 +72,14 @@ textarea = browser.find_element_by_css_selector('[class="form-control first"]')
 textarea.send_keys("mikhail")
 textarea = browser.find_element_by_css_selector('[class="form-control second"]')
 textarea.send_keys("blablab333@mail.ru")
-''' '''
+
 button = browser.find_element_by_xpath("/html/body/div[1]/form/button")
 button.click()
-'''
-'''
+
 time.sleep(10)
 browser.quit()
-'''
-'''#first
+
+#first
 try:
     link = "http://suninjuly.github.io/registration2.html"
     browser = webdriver.Chrome()
@@ -113,4 +110,3 @@ finally:
     time.sleep(10)
     # закрываем браузер после всех манипуляций
     browser.quit()
-    '''
