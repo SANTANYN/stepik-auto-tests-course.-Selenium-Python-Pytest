@@ -6,7 +6,7 @@ import unittest
 def calc(x):
   return str(math.log(abs(12*math.sin(int(x)))))
 import os
-
+'''''
 browser = webdriver.Chrome()
 browser.get("http://suninjuly.github.io/math.html")
 x_element = browser.find_element_by_css_selector('#input_value')
@@ -137,3 +137,13 @@ x = x_element.text
 y = calc(x)
 browser.find_element_by_css_selector("#answer").send_keys(y)
 browser.find_element_by_css_selector("#solve").click()
+
+
+
+browser = webdriver.Chrome()
+browser.get("https://kit-eu.voximplant.com/login")
+browser.find_element_by_xpath("/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/form/div[1]/div/div/div[1]/input").send_keys("mikhailtest")
+browser.find_element_by_xpath("/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/form/div[2]/div/div[1]/div[1]/input").send_keys("msorokin@voximplant.com")
+browser.find_element_by_xpath("/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/form/div[3]/div/div[1]/div[1]/input").send_keys("Ms0665117437")
+browser.find_element_by_xpath("/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/form/button").click()
+'''''
